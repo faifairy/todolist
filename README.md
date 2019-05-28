@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # faifairy
 
 > A Vue.js project
@@ -16,3 +17,6 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# todolist
+>>>>>>> 240c6694dc0b3daa76a1fcf1f10860464d2a2339
