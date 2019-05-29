@@ -21,6 +21,11 @@
 </template>
 
 <script>
+
+import storage from './model/localStorage.js';
+
+console.log(storage);
+
 export default {
   name: 'app',
   data () {
@@ -36,24 +41,22 @@ export default {
               title: this.todo,
               checked: false
             });
-            
-        localStorage.setItem('list',JSON.stringify(this.list));
-        
         }
+        storage.set('list',this.list);
       },
       remove(k){
         this.list.splice(k,1);
 
-        localStorage.setItem('list',JSON.stringify(this.list));
+        storage.set('list',this.list);
         
       },
       saveList(){
-        localStorage.setItem('list',JSON.stringify(this.list));
+        storage.set('list',this.list);
         
       } 
   },
   mounted(){
-        var list=JSON.parse(localStorage.getItem('list'));
+        var list=storage.get('list');
         
         if (list) {
           this.list=list;
